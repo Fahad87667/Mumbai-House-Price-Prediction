@@ -21,11 +21,10 @@ def predict():
     area= request.form.get('area')
     region= request.form.get('region')
     status= request.form.get('status')
-    price = request.form.get('price')
     
     
-    print(bhk,type,area,region,status,price)
-    input = pd.DataFrame([[bhk,type,area,region,status,price]],columns=['bhk','type','area','region','status','price'])
+    print(bhk,type,area,region,status)
+    input = pd.DataFrame([[bhk,type,area,region,status]],columns=['bhk','type','area','region','status'])
     prediction=pipe.predict(input)[0]
     
      # Format prediction as a string with currency symbol
