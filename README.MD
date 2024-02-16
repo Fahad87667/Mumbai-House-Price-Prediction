@@ -32,23 +32,23 @@ The dataset used for this project contains information about properties in Mumba
 
 ## Installation
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/mumbai-house-price-prediction.git
-   ```
-2.Install dependencies:
-
+1. **Clone the repository:**
     ```bash
-   pip install -r requirements.txt
-   ```
+    git clone https://github.com/your-username/mumbai-house-price-prediction.git
+    ```
+
+2. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
 Run the Python script:
-    ```bash
-   python app.py
-   ```
+```bash
+python app.py
+```
+
 
 ## Model Evaluation
 
