@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mumbai House Prediction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1 {
+        text-align: center;
+        color: #4caf50;
+        margin: 50px 10px 10;
+        font-weight: bold;
+        font-size: 50px; 
+      }
+
+      p {
+        text-align: center;
+        color: #777;
+        margin-bottom: 40px;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        text-align: left;
+        margin: 0 auto; /* Center the form horizontally */
+        max-width: 1000px; /* Optional: Set a maximum width for the form */
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        border-radius: 18px;
+      }
+
+      .form-group {
+        margin-bottom: 29px;
+      }
+
+      label {
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+        display: block;
+      }
+
+      input,
+      select {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      button {
+        grid-column: span 2;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        background-color: #fff;
+        box-shadow: 10 10 10px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: #fff;
+      }
+
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Mumbai House Prediction</h1>
+    <p>Provide details to predict the price of houses in Mumbai.</p>
+
+    <form action="/predict" method="post">
+      <div class="form-group">
+        <label for="bhk">Number of Bedrooms (BHK):</label>
+        <input type="text" id="bhk" name="bhk" required />
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type of Property:</label>
+        <select id="type" name="type" required>
+          {% for type in types %}
+          <option value="{{ type }}">{{ type }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="area">Area (in square feet):</label>
+        <input type="text" id="area" name="area" required />
+      </div>
+
+      <div class="form-group">
+        <label for="region">Location/Region:</label>
+        <select id="region" name="region" required>
+          {% for region in regions %}
+          <option value="{{ region }}">{{ region }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="status"
+          >Current Status (e.g., furnished, unfurnished):</label
+        >
+        <select id="status" name="status" required>
+          {% for status in statuss %}
+          <option value="{{ status }}">{{ status }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Expected Price (in INR):</label>
+        <input type="text" id="price" name="price" required />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
