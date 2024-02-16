@@ -40,15 +40,15 @@ The dataset used for this project contains information about properties in Mumba
 2.Install dependencies:
 
     ```bash
-    pip install -r requirements.txt
-    ```
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
 Run the Python script:
     ```bash
-    python app.py
-    ```
+   python app.py
+   ```
 
 ## Model Evaluation
 
