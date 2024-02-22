@@ -8,7 +8,7 @@ pipe = pickle.load(open("model.pkl", "rb"))
 
 # Define Streamlit app with a customized color theme and layout
 def main():
-    st.title("Mumbai House Price Prediction")
+    st.title("MumbaiDreamHomes Predictor")
 
     # Custom inline CSS for a different color theme
     st.markdown(
